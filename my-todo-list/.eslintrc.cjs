@@ -27,5 +27,6 @@ module.exports = {
     ],
     "no-var": "error",
     "no-use-before-define": "off",
+    "react/prop-types": "off",
   },
 };
