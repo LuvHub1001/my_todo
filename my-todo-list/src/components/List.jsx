@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./List.css";
 import TodoItem from "./TodoItem";
 
-const List = ({ todo, onUpdate }) => {
+const List = ({ todo, onUpdate, onRemove }) => {
   const [searchContent, setSearchContent] = useState("");
   const handleSearchContent = (e) => {
     setSearchContent(e.target.value);
@@ -30,7 +30,12 @@ const List = ({ todo, onUpdate }) => {
       <div className="todoWrapper">
         {filterdTodo.map((todoItem) => {
           return (
-            <TodoItem key={todoItem.id} {...todoItem} onUpdate={onUpdate} />
+            <TodoItem
+              key={todoItem.id}
+              {...todoItem}
+              onUpdate={onUpdate}
+              onRemove={onRemove}
+            />
           );
         })}
       </div>

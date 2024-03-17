@@ -27,11 +27,15 @@ function App() {
     );
   };
 
+  const onRemove = (targetId) => {
+    setTodo(todo.filter((item) => item.id !== targetId));
+  };
+
   return (
     <div className="App">
       <Header />
       <Editor onCreate={onCreate} />
-      <List todo={todo} onUpdate={onUpdate} />
+      <List todo={todo} onUpdate={onUpdate} onRemove={onRemove} />
     </div>
   );
 }
