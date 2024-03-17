@@ -1,0 +1,17 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.list > input {
+  width: 100%;
+  border: 0px;
+  border-bottom: 1px solid rgb(220, 220, 220);
+  padding: 15px 0px;
+}
+
+.list > input:focus {
+  outline: none;
+  border-bottom: 1px solid rgb(37, 147, 255);
+}
